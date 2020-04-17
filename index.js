@@ -16,5 +16,4 @@ app.use('/providers/', providerRouter)
 const userRouter = require('./Routes/userRoutes')
 app.use('/users/', userRouter) 
 
-
 app.listen(PORT, () => console.log("Now serving you on port: ", PORT));
