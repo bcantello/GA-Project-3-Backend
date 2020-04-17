@@ -18,7 +18,7 @@ Most of out data will be stored and accessed from a rest api that we will build.
 ## Wireframes
 
 
-- [Wireframes](https://res.cloudinary.com/df6sigxz7/image/upload/v1587140842/pet%20service%20app/pet-owner_wireframe.png)
+- [Wireframes](https://res.cloudinary.com/df6sigxz7/image/upload/v1587143239/pet%20service%20app/pet_owner_mvp.png)
 - [React architecture](https://docs.google.com/drawings/d/18Hq_A72VDjx0QRy-cDF9zlw0pyXYMBRaETnuvfN9eiU/edit)
 
 
@@ -89,7 +89,9 @@ Most of out data will be stored and accessed from a rest api that we will build.
 | Header | M | 2hrs |  |  | 
 | Footer | L | 1hr |  |  |
 | CSS | H | 16hrs |  |  |
-| Total | - | 49hrs |  |  |
+| Testing | H | 8hrs |  |  |
+| Deployment | H | 5hrs |  |  |
+| Total | - | 62hrs |  |  |
 
 ### Back end
 
@@ -107,7 +109,9 @@ Most of out data will be stored and accessed from a rest api that we will build.
 | Appointments Routes | H | 2hrs |  |  |
 | Service Provider Routes | H | 2hrs |  |  |
 | User Routes | H | 2hrs |  |  |
-| Total | H | 19hrs |  |  |
+| Testing | H | 4hrs |  |  |
+| Deployment | H | 4hrs |  |  |
+| Total | H | 27hrs |  |  |
 
 ## Additional Libraries
  Axios, Bootstrap, Google Fonts 
