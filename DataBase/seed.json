@@ -1,0 +1,94 @@
+[        
+    {
+        "provider":
+        {
+            "name": "Billie",
+            "reviews": 471,
+            "stars": 5,
+            "services": [
+                {
+                    "walk": true,
+                    "groom": true,
+                    "sit": false
+                }
+            ]
+        }
+    },
+    {
+        "provider":
+        {
+            "name": "Krista",
+            "reviews": 406,
+            "stars": 5,
+            "services": [
+                {
+                    "walk": true,
+                    "groom": false,
+                    "sit": true
+                }
+            ]
+        }
+    },
+    {
+        "provider":
+        {
+            "name": "Stephen",
+            "reviews": 2427,
+            "stars": 5,
+            "services": [
+                {
+                    "walk": true,
+                    "groom": false,
+                    "sit": false
+                }
+            ]
+        }
+    },
+    {
+        "provider":
+        {
+            "name": "Rosa",
+            "reviews": 18,
+            "stars": 4,
+            "services": [
+                {
+                    "walk": false,
+                    "groom": false,
+                    "sit": true
+                }
+            ]
+        }
+    },
+    {
+        "provider": 
+        {
+            "name": "Connor",
+            "reviews": 56,
+            "stars": 3,
+            "preferred": [
+                    ""
+            ],
+            "services": [
+                {
+                    "walk": true,
+                    "groom": false,
+                    "sit": true
+                }
+            ]
+        }
+    },
+    {
+        "user":
+        {
+            "name": "Taylor Demo",
+            "zip": 94120,
+            "pet": [
+                {
+                    "pet name": "Beckett",
+                    "age": 2,
+                    "breed": "Bernedoodle"
+                }
+            ]
+        }
+    }
+]
