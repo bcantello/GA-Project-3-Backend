@@ -2,13 +2,13 @@
 
 ## Project Links
 
-- [add backend github repo link]()
-- [add frontend github repo link]()
+- [Backend github repo link](https://github.com/bcantello/GA-Project-3-Backend.git)
+- [Frontend github repo link](https://github.com/bcantello/GA-Project-3-Frontend.git)
 - [add your deployment link]()
 
 ## Project Description
 
-An app for connecting pet owners with pet service providers in their local ara. 
+An app for connecting pet owners with pet service providers in their local ara. Pet owners will be able to choose from different services to schedule. The service providers will be set up in a "gig economy" fashion with service providers able to approve or decline service requests in their local metro.
 
 ## API
 
@@ -17,67 +17,100 @@ Most of out data will be stored and accessed from a rest api that we will build.
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
-- [add link to your react architecture]()
+- [Wireframes](https://res.cloudinary.com/df6sigxz7/image/upload/v1587140842/pet%20service%20app/pet-owner_wireframe.png)
+- [React architecture](https://docs.google.com/drawings/d/18Hq_A72VDjx0QRy-cDF9zlw0pyXYMBRaETnuvfN9eiU/edit)
 
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
 
-#### PostMVP EXAMPLE
+#### MVP - Front end
+- User login in form connected to mondoDB data
+- Form to create an account as a pet owner
+- Calendar to schedule pet services
+- Appointment management (update or delete scheduled appointments)
+- Responsive design built mobile first
 
-- Add localStorage or firebase for storage
+#### MVP - Back end
+- Consumer Model: Ability to add pet owner profiles
+- Provider Model: Searchable provider profiles
+- Appointment Model: Create, update, and delete scheduled appointments
+- Heroku Deployment using Node, Express, Mongodb
+
+#### PostMVP - Front and Back end
+
+- Ability to add a service provider as a favorite
+- Automated notifications (SMS?)
+- Ability to sign up as a service provider
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 ### Front end
 
 | Component | Description | 
 | --- | :---: |  
 | App | This will make the initial data pull and include React Router| 
+| Main | Hold routes |
+| Home/Login | Includes forms for new and existing user login |
+| Dashboard | Includes currently scheduled appointments and button linking to new appointment scheduler |
+| Appointment Scheduling | Calendar (bootstrap?) for appointment scheduling. Creates appointment entry in DB |
+| Confirmation | Displays confirmation details for scheduled appointment |
 | Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav |
+| Footer | copyright and home nav |
 
 ### Back end
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Appointments Model | schema and connections model to provide appointment information. | 
+| service provider model | schema and connections model to provide service provider information | 
+| user model | schema and connections model to provide information of the user to the database | 
+| appointments Controller | CRUD page to manipulate data in forms on frontend. |
+| Service Provider controller | CRUD for service providers |
+| User Controller | CRUD for users |
+| DB Seed data | Seed data for demo user and providers |
+| Connection | Handles api connection |
+| Index.js | Handles db routing and implements library dependencies |
+| Routing for all models | 3 components which creating routing between models |
 
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 ### Front end
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| App | H | 8hrs |  |  |
+| Main | H | 2hrs |  |  |
+| Home/Login | H | 5hrs |  |  |
+| Dashboard | H | 5hrs |  |  |
+| Appointment Scheduling | H | 8hrs |  |  |
+| Confirmation | H | 2hrs |  |  |
+| Header | M | 2hrs |  |  | 
+| Footer | L | 1hr |  |  |
+| CSS | H | 16hrs |  |  |
+| Total | - | 49hrs |  |  |
 
 ### Back end
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Create DB Seed Data | H | 1hr |  |  |
+| Appointments Model | H | 1hr |  |  |
+| Service Provider Model | H | 1hr |  |  |
+| User Model | H | 1hr |  |  |
+| Appointments controller | H | 2hrs |  |  |
+| Service Provider controller | H | 2hrs |  |  |
+| User Controller | H | 2hrs |  |  |
+| Connection | H | 1hr |  |  |
+| Index.js | H | 2hrs |  |  |
+| Appointments Routes | H | 2hrs |  |  |
+| Service Provider Routes | H | 2hrs |  |  |
+| User Routes | H | 2hrs |  |  |
+| Total | H | 19hrs |  |  |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+ Axios, Bootstrap, Google Fonts 
 
 ## Code Snippet
 
