@@ -1,4 +1,4 @@
-const User = require('../Models/userModel')
+const User = require('../Models/userModel');
 
 const getAllUsers = (req, res) =>{
     User.find({}).then(user => {
@@ -7,7 +7,16 @@ const getAllUsers = (req, res) =>{
             user
         })
     })
-}
+};
+
+const getUsersByName = (req, res) => {
+    User.findOne({"FirstName": req.params.Name}).then(user => {
+      res.status(200).json({
+          status: "ok",
+          user
+        })  
+    })
+};
 
 const createUser = (req, res) =>{
     const body = req.body
@@ -20,7 +29,7 @@ const createUser = (req, res) =>{
             })
         })
     })
-}
+};
 
 const updateUser = (req, res) =>{
     const body = req.body
@@ -33,7 +42,7 @@ const updateUser = (req, res) =>{
             })
         })
     }))
-}
+};
 
 const deleteUser = (req, res) =>{
     User.findOneAndDelete({_id: req.params.id}).then((user) =>{
@@ -45,12 +54,14 @@ const deleteUser = (req, res) =>{
             })
         })
     })
-}
+};
 
 module.exports = {
     getAllUsers,
+    getUsersByName,
     createUser,
     updateUser,
     deleteUser
-}
+};
+
 

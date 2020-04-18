@@ -1,4 +1,4 @@
-const mongoose = require('../DataBase/connection')
+const mongoose = require('../DataBase/connection');
 const UserSchema = mongoose.Schema({
    
     name: String,
@@ -11,5 +11,5 @@ const UserSchema = mongoose.Schema({
         }
     ]
 })
-const User = mongoose.model("User", UserSchema)
+const User = mongoose.model("User", UserSchema);
 module.exports = User;
