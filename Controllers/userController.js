@@ -24,6 +24,13 @@ const getUsersByName = (req, res) => {
     })
 };
 
+const getUsersWithPets = (req, res) => {
+    User.find({_id: req.params.id}).populate("Pet")
+    .then((users) => {
+        res.json(users);
+    })
+};
+
 const createUser = (req, res) => {
     const body = req.body
     User.create(body).then(user => {
@@ -65,6 +72,7 @@ module.exports = {
     getAllUsers,
     getUserById,
     getUsersByName,
+    getUsersWithPets,
     createUser,
     updateUser,
     deleteUser

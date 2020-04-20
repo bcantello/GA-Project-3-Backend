@@ -28,8 +28,7 @@ User.deleteMany({}).then(() => {
             taylor.pet.push(pet.id); //or Pets
             taylor.save();
             console.log("created taylor: beckett", taylor);
-          });
-        });
+          }).then((provider) => {
         Provider.create({
           name: "Billie",
           reviews: 471,
@@ -42,7 +41,7 @@ User.deleteMany({}).then(() => {
             }
           ]
         }).then((billie) => {
-          console.log("Billie created", billie);
+          console.log("Billie created", billie)
           Appointment.create({
             date: "August 20",
             dateTime: "10:30",
@@ -52,6 +51,9 @@ User.deleteMany({}).then(() => {
               "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
             user_id: taylor.id,
             provider_id: billie.id
+          }).then((appointment) => {
+            billie.appointment.push(appointment.id); //or Pets
+            billie.save();
           }).then(() => {
             process.exit();
           });
@@ -59,4 +61,6 @@ User.deleteMany({}).then(() => {
       });
     });
   });
-});
+})
+})
+})
