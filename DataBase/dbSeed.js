@@ -12,6 +12,8 @@ User.deleteMany({}).then(() => {
       console.log("deleted all providers");
       Appointment.deleteMany({}).then(() => {
         console.log("deleted all appointments");
+
+
         User.create({
           name: "Taylor Demo",
           email: "taylor@demo.com",
@@ -25,10 +27,29 @@ User.deleteMany({}).then(() => {
             age: 2,
             breed: "Bernedoodle"
           }).then((pet) => {
+            // console.log("taylor from pet: ", taylor);
             taylor.pet.push(pet.id); //or Pets
             taylor.save();
             console.log("created taylor: beckett", taylor);
-          }).then((provider) => {
+          })
+        }).then((taylor) => {
+          console.log("taylor from appointments: ", taylor);
+          Appointment.create({
+            date: "2020-04-25",
+            time: "10:30",
+            service: "Groom",
+            petName: Pet.name,
+            comments:
+                "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
+            user_id: taylor.id
+          }).then((appointment) => {
+            taylor.appointment.push(appointment.id);
+            taylor.save();
+          });
+        });
+
+        // .then((provider) => {
+
         Provider.create({
           name: "Billie",
           reviews: 471,
@@ -40,27 +61,40 @@ User.deleteMany({}).then(() => {
               sit: false
             }
           ]
-        }).then((billie) => {
-          console.log("Billie created", billie)
-          Appointment.create({
-            date: "August 20",
-            dateTime: "10:30",
-            service: "Groom",
-            petName: pet.name,
-            comments:
-              "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
-            user_id: taylor.id,
-            provider_id: billie.id
-          }).then((appointment) => {
-            billie.appointment.push(appointment.id); //or Pets
-            billie.save();
-          }).then(() => {
+        }).then(() => {
             process.exit();
           });
-        });
-      });
-    });
-  });
+
+
+
+
+
+      })
+    })
+  })
 })
-})
-})
+      //
+      //       .then((billie) => {
+      //         console.log("Billie created", billie)
+      //         Appointment.create({
+      //           date: "2020-04-25",
+      //           time: "10:30",
+      //           service: "Groom",
+      //           petName: Pet.name,
+      //           comments:
+      //               "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
+      //           user_id: taylor.id,
+      //           provider_id: billie.id
+      //         }).then((appointment) => {
+      //           billie.appointment.push(appointment.id); //or Pets
+      //           billie.save();
+      //         }).then(() => {
+      //           process.exit();
+      //         });
+      //       });
+      // });
+//     });
+//   });
+// })
+// })
+// })

@@ -1,6 +1,5 @@
 const mongoose = require('../DataBase/connection');
 const UserSchema = mongoose.Schema({
-   
     name: String,
     email: {
         type: String,
@@ -17,6 +16,12 @@ const UserSchema = mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId
         }
     ],
+    appointment: [
+        {
+            ref: "Appointment",
+            type: mongoose.Schema.Types.ObjectId
+        }
+    ],
     preferredProvider: [
         {
             ref: "Provider",
@@ -24,5 +29,6 @@ const UserSchema = mongoose.Schema({
         }
     ]
 })
+
 const User = mongoose.model("User", UserSchema);
 module.exports = User;
