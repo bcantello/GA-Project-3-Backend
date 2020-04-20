@@ -12,7 +12,17 @@ const ProviderSchema = new mongoose.Schema({
                     groom: Boolean,
                     sit: Boolean
                 }
-            ]
+            ],
+            createdAtDate: 
+                {
+                type: Date,
+                default: Date.now
+                },
+            updatedAtDate: 
+                {
+                type: Date,
+                default: Date.now
+                }
         }
 });
 
