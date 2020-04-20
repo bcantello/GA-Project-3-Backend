@@ -2,8 +2,14 @@ const mongoose = require('../DataBase/connection');
 const UserSchema = mongoose.Schema({
    
     name: String,
-    email: String,
-    password: String,
+    email: {
+        type: String,
+        required: true,
+    },
+    password:{
+        type: String,
+        required: true
+    },
     zip: Number,
     pet: [
         {
