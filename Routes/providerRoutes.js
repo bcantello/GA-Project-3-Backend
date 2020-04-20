@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-
 const controller = require('../Controllers/providerController');
 
 router.get('/', controller.getAllProviders);
+
+router.get('/:id', controller.getProviderById);
 
 router.get('/:name', controller.getProviderByName);
 

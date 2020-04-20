@@ -1,11 +1,17 @@
 const Provider = require('../Models/providerModel');
 
-const getAllProviders = (req, res) =>{
+const getAllProviders = (req, res) => {
     Provider.find({}).then(provider => {
         res.status(200).json({
             status: "ok",
             provider
         })
+    })
+};
+
+const getProviderById = (req, res) => {
+    Provider.findOne({_id: req.params.id}).then((provider) => {
+        res.json(provider)
     })
 };
 
@@ -18,22 +24,21 @@ const getProviderByName = (req, res) => {
     })
 };
 
-const createProvider = (req, res) =>{
+const createProvider = (req, res) => { 
     const body = req.body
     Provider.create(body).then(provider => {
         Provider.find({}).then((providers) => {
             res.status(200).json({
                 status: "ok",
-                msg: `Updated ${provider.id}: ${provider.name}`,
                 providers
             })
         })
     })
 };
 
-const updateProvider = (req, res) =>{
+const updateProvider = (req, res) => {
     const body = req.body
-    Provider.findOneAndUpdate({_id: req.params.id}, body).then((provider =>{
+    Provider.findOneAndUpdate({_id: req.params.id}, body).then((provider => {
         Provider.find({}).then((providers) => {
             res.status(200).json({
                 status: "ok",
@@ -45,7 +50,7 @@ const updateProvider = (req, res) =>{
 };
 
 const deleteProvider = (req, res) =>{
-    Provider.findOneAndDelete({_id: req.params.id}).then((provider) =>{
+    Provider.findOneAndDelete({_id: req.params.id}).then((provider) => {
         Provider.find({}).then((providers) => {
             res.status(200).json({
                 status: "ok",
@@ -58,6 +63,7 @@ const deleteProvider = (req, res) =>{
 
 module.exports = {
     getAllProviders,
+    getProviderById,
     getProviderByName,
     createProvider,
     updateProvider,
