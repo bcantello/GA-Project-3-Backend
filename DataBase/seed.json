@@ -81,6 +81,8 @@
         "user":
         {
             "name": "Taylor Demo",
+            "email": "taylor@demo.com",
+            "password": "demo",
             "zip": 94120,
             "pet": [
                 {
