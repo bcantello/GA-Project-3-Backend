@@ -1,5 +1,14 @@
 const Appointment = require('../Models/appointmentModel');
 
+const getAppointments = (req, res) => {
+    Appointment.find({}).then(appointment => {
+        res.status(200).json({
+            status: "ok",
+            appointment
+        })
+    })
+};
+
 const createAppointment = (req, res) => {
     Appointment.create(req.body).then(appointment => {
         res.json(appointment);
@@ -19,6 +28,7 @@ const deleteAppointment = (req, res) => {
 };
 
 module.exports = {
+    getAppointments,
     createAppointment,
     updateAppointment,
     deleteAppointment
