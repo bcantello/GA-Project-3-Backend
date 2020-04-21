@@ -81,7 +81,7 @@ Most of out data will be stored and accessed from a rest api that we will build.
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | App | H | 8hrs |  |  |
-| Main | H | 2hrs |  |  |
+| Main | H | 2hrs | 10min |  |
 | Home/Login | H | 5hrs |  |  |
 | Dashboard | H | 5hrs |  |  |
 | Appointment Scheduling | H | 8hrs |  |  |
@@ -97,7 +97,7 @@ Most of out data will be stored and accessed from a rest api that we will build.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create DB Seed Data | H | 1hr |  |  |
+| Create DB Seed Data | H | 1hr | 5hrs |  |
 | Appointments Model | H | 1hr | 10min |  |
 | Pets Model | H | 1hr | 10min |  |
 | Service Provider Model | H | 1hr |  |  |
@@ -113,8 +113,8 @@ Most of out data will be stored and accessed from a rest api that we will build.
 | Service Provider Routes | H | 2hrs |  |  |
 | User Routes | H | 2hrs |  |  |
 | Testing | H | 4hrs |  |  |
-| Deployment | H | 4hrs |  |  |
-| Total | H | 32hrs | 1hr |  |
+| Deployment | H | 4hrs | 1hr |  |
+| Total | H | 32hrs | 7hr |  |
 
 ## Additional Libraries
  Axios, Bootstrap, Google Fonts 
