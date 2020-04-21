@@ -10,6 +10,8 @@ router.get('/:id/pet', controller.getUsersWithPets);
 
 router.get('/:name', controller.getUsersByName);
 
+router.get('/:email', controller.getUserByEmail);
+
 router.post('/', controller.createUser);
 
 router.put('/:id', controller.updateUser);
