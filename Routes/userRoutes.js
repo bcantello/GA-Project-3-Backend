@@ -10,7 +10,7 @@ router.get('/:id', controller.getUserById);
 
 router.get('/:name', controller.getUsersByName);
 
-router.get('/email/:user', controller.getUserByEmailPassword);
+router.get('/:email/:password', controller.getUserByEmailPassword);
 
 router.post('/', controller.createUser);
 
