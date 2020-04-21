@@ -13,13 +13,13 @@ const getProviderById = (req, res) => {
 };
 
 const getProviderByName = (req, res) => {
-    Provider.findOne({"name": req.params.name}).then(provider => {
+    Provider.findOne({name: req.params.name}).then(provider => {
         res.status(200).json(provider);
     });
 };
 
 const getProviderByZipcode = (req, res) => {
-    Provider.find({"zip": req.params.zip}).then(providers => {
+    Provider.find({zip: req.params.zip}).then(providers => {
         res.status(200).json(providers);
     });
 };
