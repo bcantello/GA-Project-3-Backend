@@ -27,28 +27,12 @@ User.deleteMany({}).then(() => {
             age: 2,
             breed: "Bernedoodle"
           }).then((pet) => {
-            // console.log("taylor from pet: ", taylor);
             taylor.pet.push(pet.id); //or Pets
             taylor.save();
             console.log("created taylor: beckett", taylor);
-          })
-        }).then((taylor) => {
-          console.log("taylor from appointments: ", taylor);
-          Appointment.create({
-            date: "2020-04-25",
-            time: "10:30",
-            service: "Groom",
-            petName: Pet.name,
-            comments:
-                "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
-            user_id: taylor.id
-          }).then((appointment) => {
-            taylor.appointment.push(appointment.id);
-            taylor.save();
           });
         });
 
-        // .then((provider) => {
 
         Provider.create({
           name: "Billie",
@@ -61,40 +45,37 @@ User.deleteMany({}).then(() => {
               sit: false
             }
           ]
-        }).then(() => {
-            process.exit();
-          });
+        }).then((provider) => {
+          console.log("created provider", provider)
+        });
 
+              //   .then((billie) => {
+              // console.log("Billie created", billie)
 
+        Appointment.create({
+          date: "2020-05-25",
+          time: "10:30",
+          service: "Groom",
+          // petName: "",
+          comments:
+              "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
+          // user_id: "",
+          // provider_id: ""
+        }).then((appointment) => {
+          console.log("created appointment", appointment);
+          process.exit();
+        });
 
-
-
-      })
-    })
-  })
-})
-      //
-      //       .then((billie) => {
-      //         console.log("Billie created", billie)
-      //         Appointment.create({
-      //           date: "2020-04-25",
-      //           time: "10:30",
-      //           service: "Groom",
-      //           petName: Pet.name,
-      //           comments:
-      //               "Please don't knock, text me when you are here - he barks a lot when someone knocks!",
-      //           user_id: taylor.id,
-      //           provider_id: billie.id
-      //         }).then((appointment) => {
-      //           billie.appointment.push(appointment.id); //or Pets
-      //           billie.save();
-      //         }).then(() => {
-      //           process.exit();
-      //         });
-      //       });
-      // });
-//     });
-//   });
-// })
-// })
-// })
+              //     .then((appointment) => {
+              //   billie.appointment.push(appointment.id); //or Pets
+              //   billie.save();
+              // }).then(() => {
+              //   process.exit();
+              // });
+            // });
+          // });
+        // });
+      });
+    });
+  });
+});
