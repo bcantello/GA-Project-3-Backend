@@ -24,21 +24,17 @@ const getProviderByName = (req, res) => {
     })
 };
 
-const createProvider = (req, res) => { 
-    const body = req.body
-    Provider.create(body).then(provider => {
-        Provider.find({}).then((providers) => {
-            res.status(200).json({
-                status: "ok",
-                providers
-            })
+const createProvider = (req, res) => {
+    Provider.create(req.body).then(provider => {
+        res.status(200).json({
+            status: "ok",
+            provider
         })
     })
 };
 
 const updateProvider = (req, res) => {
-    const body = req.body
-    Provider.findOneAndUpdate({_id: req.params.id}, body).then((provider => {
+    Provider.findOneAndUpdate({_id: req.params.id}, req.body).then((provider => {
         Provider.find({}).then((providers) => {
             res.status(200).json({
                 status: "ok",

@@ -18,7 +18,8 @@ User.deleteMany({}).then(() => {
                         name: "Beckett",
                         user_id: taylor._id,
                         age: 2,
-                        breed: "Bernedoodle"
+                        breed: "Bernedoodle",
+                        comments: "Beckett LOVES to play! He’s a little shy at first, but quickly warms up to new people. If you’re grooming him, he doesn’t like his paws being touched, but won’t be aggressive about it."
                     }).then((pet) => {
                         taylor.pet.push(pet._id);
                     }).then(() => {
@@ -54,3 +55,4 @@ User.deleteMany({}).then(() => {
         });
     });
 });
+
