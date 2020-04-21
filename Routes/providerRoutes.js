@@ -6,7 +6,9 @@ router.get('/', controller.getAllProviders);
 
 router.get('/:id', controller.getProviderById);
 
-router.get('/:name', controller.getProviderByName);
+router.get('/name/:name', controller.getProviderByName);
+
+router.get('/location/:zipcode', controller.getProviderByZipcode);
 
 router.post('/', controller.createProvider);
 

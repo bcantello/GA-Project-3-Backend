@@ -18,6 +18,12 @@ const getProviderByName = (req, res) => {
     });
 };
 
+const getProviderByZipcode = (req, res) => {
+    Provider.find({"zip": req.params.zip}).then(providers => {
+        res.status(200).json(providers);
+    });
+};
+
 const createProvider = (req, res) => {
     Provider.create(req.body).then(provider => {
         res.status(200).json(provider);
@@ -40,9 +46,8 @@ module.exports = {
     getAllProviders,
     getProviderById,
     getProviderByName,
+    getProviderByZipcode,
     createProvider,
     updateProvider,
     deleteProvider
 };
-
-
