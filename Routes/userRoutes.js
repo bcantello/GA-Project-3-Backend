@@ -6,11 +6,11 @@ router.get('/', controller.getAllUsers);
 
 router.get('/:id/pet', controller.getUsersWithPets);
 
-// router.get('/:id', controller.getUserById);
+router.get('/:id', controller.getUserById);
 
 router.get('/:name', controller.getUsersByName);
 
-router.get('/:email', controller.getUserByEmail);
+router.get('/email/:user', controller.getUserByEmailPassword);
 
 router.post('/', controller.createUser);
 
