@@ -6,9 +6,11 @@ const getAllUsers = (req, res) => {
     });
 };
 
-const getUserByEmail = (req, res) => {
-    User.findOne({email: req.params.email}).then(user => {
+const getUserByEmailPassword = (req, res) => {
+    User.findOne({$and:[{email: req.params.email},{password: req.params.password}]}).then(user => {
         res.status(200).json(user);
+    }).catch(error =>{
+        res.status(401).json(error)
     });
 };
 
@@ -56,7 +58,7 @@ module.exports = {
     createUser,
     updateUser,
     deleteUser,
-    getUserByEmail
+    getUserByEmailPassword
 };
 
 
