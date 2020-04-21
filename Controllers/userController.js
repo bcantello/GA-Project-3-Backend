@@ -32,8 +32,7 @@ const getUsersWithPets = (req, res) => {
 };
 
 const createUser = (req, res) => {
-    const body = req.body
-    User.create(body).then(user => {
+    User.create(req.body).then(user => {
         res.status(200).json({
             status: "ok",
             user
@@ -42,8 +41,7 @@ const createUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
-    const body = req.body
-    User.findOneAndUpdate({_id: req.params.id}, body).then((user => {
+    User.findOneAndUpdate({_id: req.params.id}, req.body).then((user => {
         User.find({}).then((users) => {
             res.status(200).json({
                 status: "ok",
