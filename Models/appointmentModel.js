@@ -4,7 +4,7 @@ const AppointmentSchema = new mongoose.Schema({
     date: Date,
     time: String,
     service: String,
-    petName: [
+    petID: [
         {
             ref: "Pet",
             type: mongoose.Schema.Types.ObjectId
