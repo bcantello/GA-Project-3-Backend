@@ -34,11 +34,9 @@ const getUsersWithPets = (req, res) => {
 const createUser = (req, res) => {
     const body = req.body
     User.create(body).then(user => {
-        User.find({}).then((users) => {
-            res.status(200).json({
-                status: "ok",
-                users
-            })
+        res.status(200).json({
+            status: "ok",
+            user
         })
     })
 };
