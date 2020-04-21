@@ -2,9 +2,9 @@ const mongoose = require('../DataBase/connection');
 
 const AppointmentSchema = new mongoose.Schema({
     date: Date,
-    dateTime: Date,
+    time: String,
     service: String,
-    petName: [
+    petID: [
         {
             ref: "Pet",
             type: mongoose.Schema.Types.ObjectId
@@ -25,5 +25,5 @@ const AppointmentSchema = new mongoose.Schema({
     ],
 });
 
-Appointment = mongoose.model('Appointment', AppointmentSchema);
+const Appointment = mongoose.model('Appointment', AppointmentSchema);
 module.exports = Appointment;
