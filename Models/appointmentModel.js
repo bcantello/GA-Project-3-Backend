@@ -16,13 +16,13 @@ const AppointmentSchema = new mongoose.Schema({
             ref: "User",
             type: mongoose.Schema.Types.ObjectId
         }
-    ]
-    // provider_id: [
-    //     {
-    //         ref: "Provider",
-    //         type: mongoose.Schema.Types.ObjectId
-    //     }
-    // ],
+    ],
+    provider_id: [
+        {
+            ref: "Provider",
+            type: mongoose.Schema.Types.ObjectId
+        }
+    ],
 });
 
 const Appointment = mongoose.model('Appointment', AppointmentSchema);
