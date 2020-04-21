@@ -9,6 +9,12 @@ const getAppointments = (req, res) => {
     })
 };
 
+const getAppointmentsById = (req, res) => {
+    Appointment.findOne({_id: req.params.id}, req.body).then(appointment => {
+        res.json(appointment);
+    });
+};
+
 const createAppointment = (req, res) => {
     Appointment.create(req.body).then(appointment => {
         res.json(appointment);
@@ -29,6 +35,7 @@ const deleteAppointment = (req, res) => {
 
 module.exports = {
     getAppointments,
+    getAppointmentsById,
     createAppointment,
     updateAppointment,
     deleteAppointment
