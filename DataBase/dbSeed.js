@@ -36,6 +36,7 @@ User.deleteMany({}).then(() => {
                         }).then(() => {
                             Provider.create({
                                 name: "Billie",
+                                zip: 94120,
                                 reviews: 471,
                                 stars: 5,
                                 services: [
