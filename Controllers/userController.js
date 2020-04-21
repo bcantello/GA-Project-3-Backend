@@ -9,6 +9,15 @@ const getAllUsers = (req, res) => {
     })
 };
 
+const getUserByEmail = (req, res) => {
+    User.findOne({email: req.params.email}).then(user => {
+        res.status(200).json({
+            status: "ok",
+            user
+        })
+    })
+};
+
 const getUserById = (req, res) => {
     User.findOne({_id: req.params.id}).then((user) => {
         res.json(user)
@@ -71,7 +80,8 @@ module.exports = {
     getUsersWithPets,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    getUserByEmail
 };
 
 
