@@ -8,7 +8,7 @@ router.get('/:id', controller.getProviderById);
 
 router.get('/name/:name', controller.getProviderByName);
 
-router.get('/location/:zipcode', controller.getProviderByZipcode);
+router.get('/location/:zip', controller.getProviderByZipcode);
 
 router.post('/', controller.createProvider);
 

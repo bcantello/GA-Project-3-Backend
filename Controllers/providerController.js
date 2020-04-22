@@ -7,7 +7,7 @@ const getAllProviders = (req, res) => {
 };
 
 const getProviderById = (req, res) => {
-    Provider.findOne({_id: req.params.id}).then((provider) => {
+    Provider.findOne({_id: req.params.id}).then(provider => {
         res.status(200).json(provider);
     });
 };
