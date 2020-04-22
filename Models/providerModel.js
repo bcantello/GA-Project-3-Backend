@@ -3,6 +3,7 @@ const mongoose = require('../DataBase/connection');
 const ProviderSchema = new mongoose.Schema({
     
     name: String,
+    img: String,
     zip: Number,
     reviews: Number,
     stars: Number,

@@ -36,6 +36,7 @@ User.deleteMany({}).then(() => {
                         }).then(() => {
                             Provider.create({
                                 name: "Billie",
+                                img: ('https://res.cloudinary.com/df6sigxz7/image/upload/v1587590479/pet%20service%20app/provider%20profile%20photos/billie.png'),
                                 zip: 94120,
                                 reviews: 471,
                                 stars: 5,
@@ -50,6 +51,7 @@ User.deleteMany({}).then(() => {
                             
                             Provider.create({
                                 name: "Taja",
+                                img: ('https://res.cloudinary.com/df6sigxz7/image/upload/v1587590480/pet%20service%20app/provider%20profile%20photos/taja.png'),
                                 zip: 94120,
                                 reviews: 406,
                                 stars: 5,
@@ -64,6 +66,7 @@ User.deleteMany({}).then(() => {
 
                             Provider.create({
                                 name: "Aaron",
+                                img: ('https://res.cloudinary.com/df6sigxz7/image/upload/v1587590480/pet%20service%20app/provider%20profile%20photos/aaron.png'),
                                 zip: 94120,
                                 reviews: 2427,
                                 stars: 5,
@@ -78,6 +81,7 @@ User.deleteMany({}).then(() => {
 
                             Provider.create({
                                 name: "Rosa",
+                                img: ('https://res.cloudinary.com/df6sigxz7/image/upload/v1587590480/pet%20service%20app/provider%20profile%20photos/rosa.png'),
                                 zip: 94120,
                                 reviews: 18,
                                 stars: 4,
@@ -92,6 +96,7 @@ User.deleteMany({}).then(() => {
 
                             Provider.create({
                                 name: "Connor",
+                                img: ('https://res.cloudinary.com/df6sigxz7/image/upload/v1587590480/pet%20service%20app/provider%20profile%20photos/connor.png'),
                                 zip: 94120,
                                 reviews: 56,
                                 stars: 4,
