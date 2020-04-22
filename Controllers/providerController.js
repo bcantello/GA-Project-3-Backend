@@ -7,14 +7,20 @@ const getAllProviders = (req, res) => {
 };
 
 const getProviderById = (req, res) => {
-    Provider.findOne({_id: req.params.id}).then((provider) => {
+    Provider.findOne({_id: req.params.id}).then(provider => {
         res.status(200).json(provider);
     });
 };
 
 const getProviderByName = (req, res) => {
-    Provider.findOne({"name": req.params.name}).then(provider => {
+    Provider.findOne({name: req.params.name}).then(provider => {
         res.status(200).json(provider);
+    });
+};
+
+const getProviderByZipcode = (req, res) => {
+    Provider.find({zip: req.params.zip}).then(providers => {
+        res.status(200).json(providers);
     });
 };
 
@@ -40,9 +46,8 @@ module.exports = {
     getAllProviders,
     getProviderById,
     getProviderByName,
+    getProviderByZipcode,
     createProvider,
     updateProvider,
     deleteProvider
 };
-
-
