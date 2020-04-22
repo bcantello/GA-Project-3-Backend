@@ -3,6 +3,7 @@
         "provider":
         {
             "name": "Billie",
+            "zip": 94120,
             "reviews": 471,
             "stars": 5,
             "services": [
@@ -17,7 +18,8 @@
     {
         "provider":
         {
-            "name": "Krista",
+            "name": "Taja",
+            "zip": 94120,
             "reviews": 406,
             "stars": 5,
             "services": [
@@ -32,14 +34,15 @@
     {
         "provider":
         {
-            "name": "Stephen",
+            "name": "Aaron",
+            "zip": 94120,
             "reviews": 2427,
             "stars": 5,
             "services": [
                 {
                     "walk": true,
-                    "groom": false,
-                    "sit": false
+                    "groom": true,
+                    "sit": true
                 }
             ]
         }
@@ -48,6 +51,7 @@
         "provider":
         {
             "name": "Rosa",
+            "zip": 94120,
             "reviews": 18,
             "stars": 4,
             "services": [
@@ -63,11 +67,9 @@
         "provider": 
         {
             "name": "Connor",
+            "zip": 94120,
             "reviews": 56,
-            "stars": 3,
-            "preferred": [
-                    ""
-            ],
+            "stars": 4,
             "services": [
                 {
                     "walk": true,
