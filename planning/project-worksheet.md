@@ -117,7 +117,7 @@ Most of out data will be stored and accessed from a rest api that we will build.
 | Total | H | 32hrs | 7hr |  |
 
 ## Additional Libraries
- Axios, Bootstrap, Google Fonts 
+ Axios, Google Fonts, react-calendar, react-time-picker
 
 ## Code Snippet
 
