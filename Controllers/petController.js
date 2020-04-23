@@ -6,6 +6,18 @@ const getPetById = (req, res) => {
     });
 };
 
+const getAllPets = (req, res) => {
+    Pet.find({}).then(pets => {
+        res.status(200).json(pets);
+    });
+};
+
+const getAllByAccountId = (req, res) => {
+    Pet.find({user_id: req.params.id}).then((pets) => {
+        res.status(200).json(pets);
+    });
+}
+
 const createPet = (req, res) => {
     Pet.create(req.body).then(pet => {
         res.status(200).json(pet);
@@ -28,5 +40,7 @@ module.exports = {
     getPetById,
     createPet,
     updatePet,
-    deletePet
+    deletePet,
+    getAllPets,
+    getAllByAccountId
 };
