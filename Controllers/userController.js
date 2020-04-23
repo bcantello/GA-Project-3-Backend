@@ -8,7 +8,10 @@ const getAllUsers = (req, res) => {
 
 const getUserByEmailPassword = (req, res) => {
     User.findOne({$and:[{email: req.params.email},{password: req.params.password}]}).then(user => {
-        res.status(200).json(user);
+        if(!user){
+            res.status(401).json({msg: 'no account exists'})
+        }
+        else{res.status(200).json(user)};
     }).catch(error =>{
         res.status(401).json(error)
     });
