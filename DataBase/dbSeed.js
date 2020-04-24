@@ -44,7 +44,7 @@ User.deleteMany({}).then(() => {
                                     {
                                         walk: true,
                                         groom: true,
-                                        sit: false
+                                        overnight: false
                                     }
                                 ]
                             })

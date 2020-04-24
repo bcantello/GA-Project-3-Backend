@@ -11,7 +11,7 @@ const ProviderSchema = new mongoose.Schema({
         {
             walk: Boolean,
             groom: Boolean,
-            sit: Boolean
+            overnight: Boolean
         }
     ],
     createdAtDate: 
