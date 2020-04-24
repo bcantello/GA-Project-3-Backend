@@ -80,44 +80,46 @@ Most of out data will be stored and accessed from a rest api that we will build.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| App | H | 8hrs |  |  |
-| Main | H | 2hrs | 10min |  |
-| Home/Login | H | 5hrs |  |  |
-| Dashboard | H | 5hrs |  |  |
-| Appointment Scheduling | H | 8hrs |  |  |
-| Confirmation | H | 2hrs |  |  |
-| Header | M | 2hrs |  |  | 
-| Footer | L | 1hr |  |  |
-| CSS | H | 16hrs |  |  |
-| Testing | H | 8hrs |  |  |
-| Deployment | H | 5hrs |  |  |
-| Total | - | 62hrs |  |  |
+| App | H | 8hrs | 4hr | 4hr |
+| Main | H | 2hrs | 1hr | 1hr |
+| Home/Login | H | 5hrs | 12hr | 12hr |
+| Create Pet | M | 5hrs | 6hr | 6hr |
+| Dashboard | H | 5hrs | 14hr | 14hr |
+| Appointment Scheduling | H | 8hrs | 16hr | 16hr |
+| Confirmation | H | 2hrs | 2hr | 2hr |
+| Header | M | 2hrs | 1hr | 1hr |
+| Menu | M | 3hrs | 1hr | 1hr |
+| Footer | L | 1hr | 1hr | 1hr |
+| CSS | H | 16hrs | 42hr | 42hr |
+| Testing | H | 8hrs | 2hr | 2hr |
+| Deployment | H | 5hrs | 1hr | 1hr |
+| Total | - | 62hrs | 103hr | 103hr |
 
 ### Back end
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create DB Seed Data | H | 1hr | 5hrs |  |
-| Appointments Model | H | 1hr | 10min |  |
-| Pets Model | H | 1hr | 10min |  |
-| Service Provider Model | H | 1hr |  |  |
-| User Model | H | 1hr |  |  |
-| Appointments controller | H | 2hrs | 10min |  |
-| Pets controller | H | 2hrs | 10min |  |
-| Service Provider controller | H | 2hrs |  |  |
-| User Controller | H | 2hrs |  |  |
-| Connection | H | 1hr |  |  |
-| Index.js | H | 2hrs |  |  |
-| Appointments Routes | H | 2hrs | 10min |  |
-| Pets Routes | H | 2hrs | 10min |  |
-| Service Provider Routes | H | 2hrs |  |  |
-| User Routes | H | 2hrs |  |  |
-| Testing | H | 4hrs |  |  |
-| Deployment | H | 4hrs | 1hr |  |
-| Total | H | 32hrs | 7hr |  |
+| Create DB Seed Data | H | 1hr | 5hrs | 5hr |
+| Appointments Model | H | 1hr | 30min | 30min |
+| Pets Model | H | 1hr | 1hr | 1hr |
+| Service Provider Model | H | 1hr | 1hr | 1hr |
+| User Model | H | 1hr | 1hr | 1hr |
+| Appointments controller | H | 2hrs | 1hr | 1hr |
+| Pets controller | H | 2hrs | 1hr | 1hr |
+| Service Provider controller | H | 2hrs | 1hr | 1hr |
+| User Controller | H | 2hrs | 1hr | 1hr |
+| Connection | H | 1hr | 30min | 30min |
+| Index.js | H | 2hrs | 30min | 30min |
+| Appointments Routes | H | 2hrs | 40min | 40min |
+| Pets Routes | H | 2hrs | 40min | 40min |
+| Service Provider Routes | H | 2hrs | 30min | 30min |
+| User Routes | H | 2hrs | 30min | 30min |
+| Testing | H | 4hrs | 5hrs | 5hr |
+| Deployment | H | 4hrs | 1hr | 1hr |
+| Total | H | 32hrs | 23hr | 23 |
 
 ## Additional Libraries
- Axios, Google Fonts, react-calendar, react-time-picker
+ Axios, Google Fonts, react-calendar, react-time-picker, react-burger-menu
 
 ## Code Snippet
 
