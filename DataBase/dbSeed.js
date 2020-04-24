@@ -59,7 +59,7 @@ User.deleteMany({}).then(() => {
                                     {
                                         walk: true,
                                         groom: false,
-                                        sit: true
+                                        overnight: true
                                     }
                                 ]
                             })
@@ -74,7 +74,7 @@ User.deleteMany({}).then(() => {
                                     {
                                         walk: true,
                                         groom: true,
-                                        sit: true
+                                        overnight: true
                                     }
                                 ]
                             })
@@ -89,7 +89,7 @@ User.deleteMany({}).then(() => {
                                     {
                                         walk: false,
                                         groom: false,
-                                        sit: true
+                                        overnight: true
                                     }
                                 ]
                             })
@@ -104,7 +104,7 @@ User.deleteMany({}).then(() => {
                                     {
                                         walk: true,
                                         groom: false,
-                                        sit: true
+                                        overnight: true
                                     }
                                 ]
                             }).then(() => {
