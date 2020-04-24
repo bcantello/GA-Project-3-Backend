@@ -4,7 +4,7 @@
 
 - [Backend github repo link](https://github.com/bcantello/GA-Project-3-Backend.git)
 - [Frontend github repo link](https://github.com/bcantello/GA-Project-3-Frontend.git)
-- [add your deployment link]()
+- [Deployment link](https://bcantello.github.io/GA-Project-3-Frontend/)
 
 ## Project Description
 
