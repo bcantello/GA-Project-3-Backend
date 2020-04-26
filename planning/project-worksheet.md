@@ -10,6 +10,10 @@
 
 An app for connecting pet owners with pet service providers in their local ara. Pet owners will be able to choose from different services to schedule. The service providers will be set up in a "gig economy" fashion with service providers able to approve or decline service requests in their local metro.
 
+#### Demo Login Credentials:
+- Login: taylor@demo.com
+- Password: demo
+
 ## API
 
 Most of out data will be stored and accessed from a rest api that we will build. There is the possibility that we may add additional API's for mapping, weather, or other relevant services as time permits.
